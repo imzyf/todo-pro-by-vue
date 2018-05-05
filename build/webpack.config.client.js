@@ -38,7 +38,7 @@ if (isDev) {
                 {
                     test: /\.styl$/,
                     use: [
-                        'style-loader',
+                        'vue-style-loader', //style-loader，css 没有热重载，要刷新页面；vue-style-loader 则可以
                         'css-loader',
                         {
                             loader: 'postcss-loader',
@@ -71,21 +71,22 @@ if (isDev) {
             rules: [
                 {
                     test: /\.styl$/,
-                    use: [
-                        'style-loader',
-                        'css-loader',
-                        {
-                            loader: 'postcss-loader',
-                            options: {
-                                sourceMap: true,
-                            }
-                        },
-                        'stylus-loader'
-                    ]
+                    use: ExtractPlugin.extract({
+                        fallback: 'vue-style-loader',
+                        use: [
+                            'css-loader',
+                            {
+                                loader: 'postcss-loader',
+                                options: {
+                                    sourceMap: true
+                                }
+                            },
+                            'stylus-loader'
+                        ]
+                    })
                 }
             ]
         },
-        devServer,
         plugins: defaultPluins.concat([
             new ExtractPlugin('styles.[contentHash:8].css'),
             new webpack.optimize.CommonsChunkPlugin({
