@@ -1,10 +1,22 @@
 <template>
-    <header class="main-header">
+    <header :class="$style.mainHeader">
         <h1>Todo</h1>
     </header>
 </template>
 
-<style lang="stylus" scoped>
+<!-- script>
+    export default {
+        computed: {
+            $style() {
+                return {
+                    mainHeader: '.. 编译后的 ..'
+                }
+            }
+        }
+    }
+</script -->
+
+<style lang="stylus" module>
     .main-header {
         text-align center
         h1 {
@@ -15,7 +27,3 @@
         }
     }
 </style>
-
-<docs>
-    #123 = 456
-</docs>
