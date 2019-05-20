@@ -4,18 +4,6 @@
     </header>
 </template>
 
-<!-- script>
-    export default {
-        computed: {
-            $style() {
-                return {
-                    mainHeader: '.. 编译后的 ..'
-                }
-            }
-        }
-    }
-</script -->
-
 <style lang="stylus" module>
     .main-header {
         text-align center

@@ -39,13 +39,7 @@ if (isDev) {
                     test: /\.styl$/,
                     use: [
                         'vue-style-loader', //style-loader，css 没有热重载，要刷新页面；vue-style-loader 则可以
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                module: true,
-                                localIdentName: isDev ? '[path]-[name]-[hash:base64:5]' : '[hash:base64:5]'
-                            }
-                        },
+                        'css-loader',
                         {
                             loader: 'postcss-loader',
                             options: {
