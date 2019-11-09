@@ -1,6 +1,2 @@
-import Vue from "vue";
-
-new Vue({
-  el: "#app",
-  template: "<div>this is contents</div>"
-});
+// import "./01-instance";
+import "./02-lifecycle";

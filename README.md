@@ -8,7 +8,11 @@
 
 ### Vue
 
+文件夹 [practice]
 
+```bash
+npm run practice
+```
 
 ## 发布到 Gitub Page
 
