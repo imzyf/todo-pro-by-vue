@@ -1,7 +1,10 @@
-const autoprefixer = require('autoprefixer')
-
 module.exports = {
-    plugins: [
-        autoprefixer() // 优化 css，游览器前缀
-    ]
+    //  parser: 'sugarss',
+    stage: 4,
+    features: {},
+    plugins: {
+        'postcss-import': {},
+        'postcss-preset-env': {},
+        'cssnano': {}
+    }
 }

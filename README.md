@@ -1,4 +1,4 @@
-# Todo by Vue2 webpack3
+# Todo by Vue2 webpack4
 
 学习 [Vue+Webpack 打造 todo 应用教程 - 慕课网](https://www.imooc.com/video/16411) 项目。根据课程章节 `commit`，可查看提交历史。
 
@@ -14,8 +14,6 @@
 ```
 npm init
 ```
-
-因为 webpack 已经是 4 了，但是老师的课程是 3，所以直接使用老师的 [package.js](https://github.com/Jokcy/vue-todo-tech/blob/master/webpack.config.js) 的 `dependencies`。
 
 ## 构建项目
 
@@ -41,4 +39,4 @@ git commit -m "build project"
 
 # 发布
 git subtree push --prefix=dist origin gh-pages
-``` 
+```
