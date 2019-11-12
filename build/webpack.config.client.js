@@ -41,55 +41,17 @@ if (isDev) {
     config = merge(baseConfig, {
         mode: 'development',
         devtool: 'cheap-module-eval-source-map', // 调试代码
-        module: {
-            rules: [{
-                test: /\.styl$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            sourceMap: true,
-                        }
-                    },
-                    'stylus-loader'
-                ]
-            }]
-        },
         devServer,
         plugins: defaultPluins.concat([])
     })
 } else {
     config = merge(baseConfig, {
-        entry: {
-            app: path.join(__dirname, '../client/index.js'),
-            vendor: ['vue']
-        },
+        mode: 'production',
         output: {
             filename: 'bundle.[chunkhash:8].js',
             path: path.join(__dirname, '../dist')
         },
-        module: {
-            rules: [{
-                test: /\.styl(us)?$/,
-                use: [{
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hmr: process.env.NODE_ENV === 'development',
-                        },
-                    },
-                    'css-loader',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            sourceMap: true
-                        }
-                    },
-                    'stylus-loader'
-                ]
-            }]
-        }
+        plugins: defaultPluins.concat([])
     })
 }
 

@@ -69,6 +69,23 @@ const config = {
                     },
                 ]
             }, {
+                test: /\.styl$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true,
+                            ident: 'postcss',
+                            plugins: () => [
+                                postcssPresetEnv( /* pluginOptions */ )
+                            ]
+                        }
+                    },
+                    'stylus-loader'
+                ]
+            }, {
                 test: /\.(png|jpe?g|gif|svg)$/,
                 use: [{
                     loader: "url-loader",
