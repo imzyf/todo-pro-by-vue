@@ -4,7 +4,7 @@
   "description": "todo-pro-by-vue - imooc.com",
   "private": true,
   "scripts": {
-    "server": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.config.client.js",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.config.client.js",
     "lint": "eslint --ext .js --ext .jsx --ext .vue client",
     "dev": "cross-env NODE_ENV=development webpack --config ./build/webpack.config.client.js",
     "prod": "cross-env NODE_ENV=production webpack --config ./build/webpack.config.client.js"
