@@ -6,6 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.config.client.js",
     "lint": "eslint --ext .js --ext .jsx --ext .vue client",
+    "practice": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.config.practice.js",
     "dev": "cross-env NODE_ENV=development webpack --config ./build/webpack.config.client.js",
     "prod": "cross-env NODE_ENV=production webpack --config ./build/webpack.config.client.js"
   },

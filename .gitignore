@@ -3,10 +3,10 @@
 ### Example user template
 
 # IntelliJ project files
-.idea
+.idea/
 *.iml
 out
 gen
 
-node_modules
-dist-dev
+node_modules/
+dist-dev/

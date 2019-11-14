@@ -41,17 +41,9 @@ const devServer = {
 console.log(isDev);
 if (isDev) {
   config = merge(baseConfig, {
+    entry: path.join(__dirname, "../practice/index.js"),
     mode: "development",
     devServer,
-    plugins: defaultPluins.concat([])
-  });
-} else {
-  config = merge(baseConfig, {
-    mode: "production",
-    output: {
-      filename: "bundle.[chunkhash:8].js",
-      path: path.join(__dirname, "../dist")
-    },
     plugins: defaultPluins.concat([])
   });
 }
